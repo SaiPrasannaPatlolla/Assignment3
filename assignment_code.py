@@ -3,18 +3,10 @@ import json
 import matplotlib.pyplot as plt
 
 class JsonProcessor:
-    """
-    Above class will doing the followings:
-    1. Read json data using api_url
-    2. Insert into RedisJSON
-    3. Performing some operations
-    """
+
 
     def __init__(self, api):
-        """
-        This function will intialize JsonProcessor with api_url.
-        It will also make connection with Redis using host,port and database number.
-        """
+
         self.api = api
         self.redis_server = redis.StrictRedis(host='localhost', port=6379, db=0)
 
@@ -43,7 +35,7 @@ class JsonProcessor:
 
     def create_bar_chart(self,key, data):
         """
-        This dunction will create a bar graph
+        This function will create a bar graph
         Parameters:
         key (str) : Key for which we want to showcase data
         data(str): json data
